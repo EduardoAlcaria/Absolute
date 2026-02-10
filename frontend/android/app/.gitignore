@@ -1,0 +1,5 @@
+/build/*
+!/build/.npmkeep
+/src/main/python/*
+!/src/main/python/android_server.py
+/src/main/assets/public/

@@ -1,0 +1,22 @@
+{
+  "appId": "com.gametracker.app",
+  "appName": "Absolute",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "http",
+    "allowMixedContent": true
+  },
+  "android": {
+    "buildOptions": {
+      "keystorePath": null,
+      "keystorePassword": null,
+      "keystoreAlias": null,
+      "keystoreAliasPassword": null
+    }
+  },
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  }
+}
