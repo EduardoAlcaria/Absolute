@@ -1,6 +1,6 @@
 # Absolute
 
-A personal gaming tracker for Android. Search your backlog, track progress across custom categories, and share your library — no external server required.
+A personal gaming tracker for Android. Search your backlog, track progress across custom categories, and share your libraryno external server required.
 
 ![Platform](https://img.shields.io/badge/platform-Android-green)
 ![Stack](https://img.shields.io/badge/stack-React%20%2B%20FastAPI-blue)
@@ -11,12 +11,12 @@ A personal gaming tracker for Android. Search your backlog, track progress acros
 ## Features
 
 - Search and add games from the IGDB database
-- Organize by status — To Play, Playing, Beaten
+- Organize by statusTo Play, Playing, Beaten
 - Custom color-coded categories with banners
 - Game details: summary, developer, platforms, time-to-beat, Steam price
 - Share card generator (9:16 canvas, save or share)
 - Swipe navigation between library, categories, and settings
-- Runs fully offline — no external server, Python runs inside the APK
+- Runs fully offlineno external server, Python runs inside the APK
 
 ---
 
@@ -24,9 +24,9 @@ A personal gaming tracker for Android. Search your backlog, track progress acros
 
 ```
 gamingtodolist/
-├── backend/      Python FastAPI server (IGDB API, SQLite)
-└── frontend/     React + Vite app (Capacitor → Android APK)
-    └── android/  Native Android project with embedded Python via Chaquopy
+├── backend/Python FastAPI server (IGDB API, SQLite)
+└── frontend/ React + Vite app (Capacitor → Android APK)
+└── android/Native Android project with embedded Python via Chaquopy
 ```
 
 The Python backend runs **on-device** via [Chaquopy](https://chaquo.com/chaquopy/), started as a background thread on app launch. The React frontend communicates with it over `http://127.0.0.1:8000`. The SQLite database is stored in Android's private files directory and persists across restarts.
@@ -54,7 +54,7 @@ Sign up at [Twitch Developer Console](https://dev.twitch.tv/console), create an 
 
 ```bash
 cd backend
-cp .env.example .env          # add your CLIENT_ID and CLIENT_SECRET
+cp .env.example .env# add your CLIENT_ID and CLIENT_SECRET
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
@@ -70,36 +70,36 @@ docker-compose up backend
 ```bash
 cd frontend
 npm install
-cp .env.local.example .env.local   # add VITE_IGDB_CLIENT_ID / VITE_IGDB_CLIENT_SECRET
+cp .env.local.example .env.local # add VITE_IGDB_CLIENT_ID / VITE_IGDB_CLIENT_SECRET
 npm run dev
 ```
 
 ### Android APK
 
 1. Copy the credentials file:
-   ```bash
-   cp frontend/android/secrets.gradle.example frontend/android/secrets.gradle
-   # edit secrets.gradle and fill in your IGDB credentials
-   ```
+ ```bash
+ cp frontend/android/secrets.gradle.example frontend/android/secrets.gradle
+ # edit secrets.gradle and fill in your IGDB credentials
+ ```
 
 2. Build and sync:
-   ```bash
-   cd frontend
-   npm run build
-   npx cap sync android
-   ```
+ ```bash
+ cd frontend
+ npm run build
+ npx cap sync android
+ ```
 
 3. Assemble the APK (requires Android Studio's JBR Java 21):
-   ```bash
-   export JAVA_HOME="/path/to/Android Studio/jbr"
-   cd frontend/android
-   ./gradlew assembleDebug
-   ```
+ ```bash
+ export JAVA_HOME="/path/to/Android Studio/jbr"
+ cd frontend/android
+ ./gradlew assembleDebug
+ ```
 
 4. Install:
-   ```bash
-   adb install app/build/outputs/apk/debug/app-debug.apk
-   ```
+ ```bash
+ adb install app/build/outputs/apk/debug/app-debug.apk
+ ```
 
 ---
 
