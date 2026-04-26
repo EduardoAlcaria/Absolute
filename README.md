@@ -16,7 +16,7 @@ A personal gaming tracker for Android. Search your backlog, track progress acros
 - Game details: summary, developer, platforms, time-to-beat, Steam price
 - Share card generator (9:16 canvas, save or share)
 - Swipe navigation between library, categories, and settings
-- Runs fully offlineno external server, Python runs inside the APK
+- Runs fully offline no external server, Python runs inside the APK
 
 ---
 
