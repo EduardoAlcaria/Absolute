@@ -1,6 +1,6 @@
 # Absolute
 
-A personal gaming tracker for Android. Search your backlog, track progress across custom categories, and share your libraryno external server required.
+A personal gaming tracker for Android. Search your backlog, track progress across custom categories, and share your library.
 
 ![Platform](https://img.shields.io/badge/platform-Android-green)
 ![Stack](https://img.shields.io/badge/stack-React%20%2B%20FastAPI-blue)
